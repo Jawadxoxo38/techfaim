@@ -42,10 +42,7 @@ Integrating **AI models**, automations, and predictive systems into business ope
 | Category | Tools |
 |-----------|-------|
 | Frontend | React, Vite, Tailwind CSS |
-| Backend | Node.js, Express |
-| Database | MySQL |
-| Analytics | Power BI, Python |
-| Cloud & Deployment | Vercel, Netlify, GitHub Actions |
+
 
 ---
 
