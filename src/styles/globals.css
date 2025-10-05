@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-gradient-to-b from-bgstart to-bgend text-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom styles */
+.glow-button:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 198, 0.45);
+  transform: translateY(-2px);
+}
+.glow-button-secondary:hover {
+  box-shadow: 0 0 20px rgba(0, 127, 255, 0.35);
+}
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  text-shadow: 0 0 8px rgba(0,255,198,0.25);
+}
+.container {
+  max-width: 1200px;
+}
