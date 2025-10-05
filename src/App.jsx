@@ -205,7 +205,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    const navLinks = ['About', 'Services', 'Work', 'Contact'];
+    const navLinks = ['About', 'Services', 'Work', 'Inquiry', 'Contact'];
 
     const handleNavClick = (e, targetId) => {
         e.preventDefault();
@@ -457,6 +457,51 @@ const Work = () => {
 };
 
 
+const Inquiry = () => {
+    const inquiryItems = [
+        {
+            title: "Website Design Inquiry",
+            category: "Inquiry Form",
+            image: "https://placehold.co/600x400/111111/00FFC6?text=Inquiry",
+            link: "https://forms.gle/bz6D8aS4Pybs9kqM6"
+        },
+        {
+            title: "Data Insights & Dashboard Request Form",
+            category: "Inquiry Form",
+            image: "https://placehold.co/600x400/111111/007FFF?text=Data+Insights",
+            link: "https://forms.gle/CgDbhYH4mEZQ3tBNA"
+        },
+        {
+            title: "Custom Order",
+            category: "Inquiry Form",
+            image: "https://placehold.co/600x400/111111/00FFC6?text=Custom+Order",
+            link: "https://forms.gle/DWbuohC4Czs3nYYv5"
+        }
+    ];
+
+    return (
+        <AnimatedSection id="inquiry">
+            <div className="container mx-auto text-center">
+                <h2 className="section-title">Inquiry</h2>
+                <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    {inquiryItems.map((item, index) => (
+                        <a key={index} href={item.link} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-lg cursor-pointer block">
+                            <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <div className="absolute inset-0 bg-black/60 transition-opacity duration-300 group-hover:bg-black/80"></div>
+                            <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                                <p className="text-sm text-[#00FFC6] uppercase tracking-widest">{item.category}</p>
+                                <h3 className="text-2xl font-bold text-white mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{item.title}</h3>
+                                <span className="mt-2 text-[#00FFC6] hover:text-white transition-colors duration-300">Link</span>
+                            </div>
+                            <div className="absolute inset-0 border-2 border-transparent transition-all duration-300 group-hover:border-[#00FFC6] rounded-lg" style={{ boxShadow: '0 0 0 0 rgba(0, 255, 198, 0)' }}></div>
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </AnimatedSection>
+    );
+};
+
 const Contact = () => {
 
     const handleSubmit = (e) => {
@@ -529,6 +574,7 @@ export default function App() {
                 <About />
                 <Services />
                 <Work />
+                <Inquiry />
                 <Contact />
             </main>
             <Footer />
