@@ -1,0 +1,2 @@
+- [x] Remove the credit text "[ Developed with React + Tailwind + Framer Motion ]" from the Footer component in src/App.jsx
+- [x] Remove the social media icons (LinkedIn, GitHub, Mail) from the bottom of the Contact component in src/App.jsx
